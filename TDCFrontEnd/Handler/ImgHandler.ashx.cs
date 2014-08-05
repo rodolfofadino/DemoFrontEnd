@@ -20,9 +20,10 @@ namespace TDCFrontEnd.Handler
                 //Acesso ao Database
                 if (!string.IsNullOrEmpty(context.Request.QueryString["t"]))
                     Thread.Sleep(Convert.ToInt32(context.Request.QueryString["t"]));
-                
+
                 context.Response.ContentType = "image/gif";
-                var imagem = ReadFile(context.Server.MapPath( string.Format("~/Content/{0}", context.Request.QueryString["img"])));
+                var imagem =
+                    ReadFile(context.Server.MapPath(string.Format("~/Content/{0}", context.Request.QueryString["img"])));
                 //Acesso ao Database
 
 
@@ -34,8 +35,10 @@ namespace TDCFrontEnd.Handler
 
                 context.Response.BinaryWrite(imagem);
             }
-            
-            context.Response.StatusCode = 404;
+            else
+            {
+                context.Response.StatusCode = 404;
+            }
         }
 
         public bool IsReusable
