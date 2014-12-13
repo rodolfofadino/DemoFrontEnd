@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "AjaxExamplo";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+
+<h2>Ajax Demo</h2>
+<div id="div1">
+    
+
+</div>
+
+<input type="button" name="Botao" id="Botao" value="Ajax Examplo" />
+
+
+
+
+
+
+
+
+
+
+@*<script>
+    $("#Botao").click(function () {
+        $.ajax({
+            url: "/Produtos/ListaEmHtml",
+            success: function (result) {
+                $("#div1").html(result);
+            }
+        });
+    });
+</script>*@
+@*<script>
+    $("#Botao").click(function () {
+        $.ajax({
+            url: "/Produtos/Lista",
+            success: function (result) {
+                $.each(result, function (index, value) {
+                    $("#div1").append(value.Nome);
+                });
+            }
+        });
+    });
+</script>*@

@@ -12,6 +12,10 @@ namespace TDCFrontEnd.Controllers
         {
             return View();
         }
+        public ActionResult AjaxExemplo()
+        {
+            return View();
+        }
         public ActionResult BundleEMini()
         {
             return View();

@@ -1,0 +1,7 @@
+﻿@model System.Collections.Generic.List<TDCFrontEnd.Controllers.Produto>
+<ul>
+    @foreach (var produto in Model)
+    {
+        <li>@produto.Id @produto.Nome</li>
+    }
+</ul>
