@@ -12,7 +12,14 @@ namespace TDCFrontEnd.Controllers
         {
             return View();
         }
-
+        public ActionResult BundleEMini()
+        {
+            return View();
+        }
+        public ActionResult LabDemo()
+        {
+            return View();
+        }
         public ActionResult Cdn()
         {
             return View();

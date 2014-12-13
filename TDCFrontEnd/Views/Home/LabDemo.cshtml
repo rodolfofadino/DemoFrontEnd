@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h3>Exemplo com LABjs:</h3>
+
+<input id="a" type="text" /> + <input id="b" type="text" />
+<button id="calcular">Calcular</button>
+<button id="carregar">Carregar</button>
+
+@section scripts{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $('#calcular').on('click', function () {
+            var a = $('#a').val();
+            var b = $('#b').val();
+
+            add(parseInt(a), parseInt(b));
+        });
+
+        $('#carregar').on('click', function () {
+            $LAB.script("/scripts/math.js");
+        });
+    </script>
+    <script src="~/Scripts/LAB.min.js"></script>
+}
+

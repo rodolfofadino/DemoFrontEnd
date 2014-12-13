@@ -27,9 +27,22 @@ namespace TDCFrontEnd
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+
+
+
+            #region Exemplo
+            
+
+            //bundles.Add(new StyleBundle("~/Content/css/principal").Include(
+            //          "~/Content/bootstrap.css",
+            //          "~/Content/detalhes.css",
+            //          "~/Content/site.css"));
+
+
+            #endregion
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
