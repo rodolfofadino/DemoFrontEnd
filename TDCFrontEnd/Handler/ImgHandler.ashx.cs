@@ -28,8 +28,8 @@ namespace TDCFrontEnd.Handler
 
 
                 ////Cache HTTP
-                //context.Response.Cache.SetExpires(DateTime.Now.AddDays(365));
-                //context.Response.Cache.SetMaxAge(new TimeSpan(336, 0, 0));
+                context.Response.Cache.SetExpires(DateTime.Now.AddDays(365));
+                context.Response.Cache.SetMaxAge(new TimeSpan(336, 0, 0));
                 ////Cache HTTP
 
 

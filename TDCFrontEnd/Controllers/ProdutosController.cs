@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 using System.Web.Mvc;
 
 namespace TDCFrontEnd.Controllers
@@ -10,8 +11,11 @@ namespace TDCFrontEnd.Controllers
     {
         //
         // GET: /Produtos/
+        [OutputCache]
         public ActionResult ListaEmHtml()
         {
+
+
             var produtos = new List<Produto>();
 
             produtos.Add(new Produto() { Id = 1, Nome = "Livro ASP.NET" });

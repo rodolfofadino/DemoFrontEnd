@@ -9,6 +9,7 @@
 
 @section scripts{
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/LAB.min.js"></script>
     <script>
         $('#calcular').on('click', function () {
             var a = $('#a').val();
@@ -17,10 +18,15 @@
             add(parseInt(a), parseInt(b));
         });
 
-        $('#carregar').on('click', function () {
+        //$('#carregar').on('click', function () {
+
+
             $LAB.script("/scripts/math.js");
-        });
+
+
+
+
+        //});
     </script>
-    <script src="~/Scripts/LAB.min.js"></script>
 }
 

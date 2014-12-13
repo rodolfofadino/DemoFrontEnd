@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "AjaxExamplo";
+    ViewBag.Title = "AjaxExemplo";
 }
 
 <script src="~/Scripts/jquery-1.10.2.js"></script>
@@ -7,40 +7,42 @@
 
 <h2>Ajax Demo</h2>
 <div id="div1">
-    
-
 </div>
 
-<input type="button" name="Botao" id="Botao" value="Ajax Examplo" />
+<input type="button" name="Botao" id="Botao" value="Ajax Exemplo" />
+<br /><br />
+<input type="text" name="Nome" id="Nome" value="" />
 
+<input type="button" name="Add" id="Add" value="Add" />
 
-
-
-
-
-
-
-
-
-@*<script>
+<script>
     $("#Botao").click(function () {
-        $.ajax({
-            url: "/Produtos/ListaEmHtml",
-            success: function (result) {
-                $("#div1").html(result);
-            }
-        });
-    });
-</script>*@
-@*<script>
-    $("#Botao").click(function () {
-        $.ajax({
-            url: "/Produtos/Lista",
-            success: function (result) {
+        $.ajax(
+        {
+            url: "",
+            success: function(result) {
                 $.each(result, function (index, value) {
-                    $("#div1").append(value.Nome);
+                    $("#div1").append("<ul id=\"lista\"></ul>");
+                    $("#lista").append("<li>" + value.Nome + "</li>");
                 });
             }
         });
     });
-</script>*@
+    $("#Add").click(function () {
+
+        var produto = {
+            Nome:  $("#Nome").val(),
+            Valor: 3.22
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: produto,
+            dataType: "json",
+            success: function (msg) {
+                alert("inserido");
+            }
+        });
+    });
+</script>
